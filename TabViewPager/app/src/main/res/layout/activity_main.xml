@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+    android:layout_weight="10">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:text="Main area"
+        android:textSize="32sp"
+        android:textColor="@android:color/black"
+        />
+	<TabHost
+	    android:id="@android:id/tabhost"
+	    android:layout_width="fill_parent"
+	    android:layout_height="0dp"
+        android:layout_weight="8"
+	    >
+	    <LinearLayout
+	        android:orientation="vertical"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        >
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+
+                />
+
+	        <FrameLayout
+	            android:id="@android:id/tabcontent"
+	            android:layout_width="0dp"
+	            android:layout_height="0dp"
+	            android:layout_weight="0"
+	            	        android:tabStripLeft="@android:color/black"
+  			android:tabStripRight="@android:color/background_dark"
+  			android:tabStripEnabled = "true"
+	            />
+
+	        <android.support.v4.view.ViewPager
+			  	android:id="@+id/viewpager"
+			  	android:layout_width="fill_parent"
+			 	android:layout_height="0dp"
+			 	android:layout_weight="1"
+			  	/>
+	    </LinearLayout>
+	</TabHost>
+</LinearLayout>
